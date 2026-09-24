@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="030ed918-3b87-403c-aa19-9e1ca38eff6c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="36DPQ4Cm3fIZoJzwFCSJkT7wKHY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Driver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SupermarketApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SupermarketGUIApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SupermarketMapApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.controllers.GUI.App.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AisleManagerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AisleTest and 3 more.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AisleTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in SupermarketManagement.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.FloorAreaManagerTest$AddFloorArea.addFloorAreaDuplicateTitle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaManagerTest$ListMethods.listAllFloorAreasWithFloors.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaManagerTest$RemoveMethods.removeAisleFromFloorAreaValid.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.FloorAreaManagerTest$RemoveMethods.removeAllFloorAreasByLevelWithAisles.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaManagerTest$RemoveMethods.removeFloorAreaByIndexWithAisles.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaManagerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.FloorAreaTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.FloorAreaTest.getAisles.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaTest.getDimensions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaTest.setTitle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FloorAreaTest.testToString.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemManagerTest$AddGoodItem.addGoodItemWithShelves.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemManagerTest$FindMethods.listItemsByAisle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemManagerTest$ItemMethods.getTotalItemWeight.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemManagerTest$RemoveMethods.removeGoodItemFromShelf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemManagerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GoodItemTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GoodItemTest.getStorageCategory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemTest.testToString.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GoodItemTest.testUnitSizeValidation.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ShelfManagerTest$ItemOperations.addItemToShelfInsufficientSpace.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ShelfManagerTest$ItemOperations.addItemToShelfInsufficientSpaceFixed.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ShelfManagerTest$ItemOperations.testHasSpaceLogicDirectly.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ShelfManagerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ShelfTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SimpleTest.basicTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SimpleTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SmartAddManagerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SmartAddManagerTest.smartAddItemWrongTemperature.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SmartAddTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.StockViewerTest$LowStockReportTests.getLowStockReportSimpleCase.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.StockViewerTest.displayAisleStock.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.StockViewerTest.displayFloorAreaStock.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.StockViewerTest.displayFloorAreaStock_ValidArea_ShouldDisplayAreaStock.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.StockViewerTest.displayFloorAreaStock_ValidArea_ShouldDisplayAreaStocok.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StockViewerTest.displayItemStock_ItemNoPhoto_ShouldHandleMissingPhoto.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.StockViewerTest.displayShelfItemsWithNullShelf.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.StockViewerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.StockViewerTest.getLowStockReportEmptySystem.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StockViewerTest.testToTwoDecimalPlaces.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StockViewerTest.viewAllStockValueTotalValItems.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.java in SupermarketManagement.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.managers in SupermarketManagement.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.models in SupermarketManagement.executor&quot;: &quot;Coverage&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/35389/Desktop/SupermarketSystemCA1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vapor\Desktop\example2\src\main\java\controllers\GUI\javaFX" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\35389\Desktop\example2\src\main\java\controllers\GUI\javaFX\Images" />
+      <recent name="C:\Users\35389\Desktop\example2\src\main\java\controllers\GUI\javaFX\FXMLFiles" />
+      <recent name="C:\Users\vapor\Desktop\example2\src\main\java\controllers\GUI\javaFX" />
+      <recent name="C:\Users\vapor\Desktop\example2\src\main\java\controllers\GUI\javaFX2" />
+      <recent name="C:\Users\vapor\Desktop\example2\src\main\java\view\javaFX" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="models" />
+      <recent name="controllers.managers" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="utils" />
+      <recent name="controllers.managers" />
+      <recent name="models" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controllers.GUI.javaFX" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SupermarketApp">
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.Driver" />
+      <module name="SupermarketManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SupermarketApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.GUI.javaFX.SupermarketApp" />
+      <module name="SupermarketManagement" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\35389\Downloads\javafx-sdk-21.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.GUI.javaFX.FXMLFiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StockViewerTest$LowStockReportTests.getLowStockReportSimpleCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SupermarketManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.managers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.managers.StockViewerTest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.managers.StockViewerTest$LowStockReportTests" />
+      <option name="METHOD_NAME" value="getLowStockReportSimpleCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StockViewerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SupermarketManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.managers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.managers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.managers.StockViewerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in SupermarketManagement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SupermarketManagement" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Driver" />
+      <item itemvalue="Application.SupermarketApp" />
+      <item itemvalue="JUnit.StockViewerTest" />
+      <item itemvalue="JUnit.StockViewerTest$LowStockReportTests.getLowStockReportSimpleCase" />
+      <item itemvalue="JUnit.java in SupermarketManagement" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SupermarketApp" />
+        <item itemvalue="JUnit.java in SupermarketManagement" />
+        <item itemvalue="Application.Driver" />
+        <item itemvalue="JUnit.StockViewerTest" />
+        <item itemvalue="JUnit.StockViewerTest$LowStockReportTests.getLowStockReportSimpleCase" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="030ed918-3b87-403c-aa19-9e1ca38eff6c" name="Changes" comment="" />
+      <created>1764538150629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764538150629</updated>
+      <workItem from="1764538151607" duration="604000" />
+      <workItem from="1764538776359" duration="14234000" />
+      <workItem from="1764605755807" duration="8508000" />
+      <workItem from="1764777223279" duration="3758000" />
+      <workItem from="1764781454681" duration="224000" />
+      <workItem from="1764781734904" duration="53713000" />
+      <workItem from="1765040628470" duration="94000" />
+      <workItem from="1765041507103" duration="91000" />
+      <workItem from="1765045451165" duration="34637000" />
+      <workItem from="1765136835963" duration="43643000" />
+      <workItem from="1765181381431" duration="2619000" />
+      <workItem from="1765293308009" duration="3073000" />
+      <workItem from="1765296428404" duration="205000" />
+      <workItem from="1765296719530" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="shelves" language="JAVA" />
+        <watch expression="shelves" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/example2$ShelfManagerTest_ItemOperations_addItemToShelfInsufficientSpace.ic" NAME="ShelfManagerTest$ItemOperations.addItemToShelfInsufficientSpace Coverage Results" MODIFIED="1764869699906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$FloorAreaTest.ic" NAME="FloorAreaTest Coverage Results" MODIFIED="1765045219339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$java_in_SupermarketManagement.ic" NAME="java in SupermarketManagement Coverage Results" MODIFIED="1765180850782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/example2$StockViewerTest_displayItemStock_ItemNoPhoto_ShouldHandleMissingPhoto.ic" NAME="StockViewerTest.displayItemStock_ItemNoPhoto_ShouldHandleMissingPhoto Coverage Results" MODIFIED="1765042006584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$FloorAreaManagerTest.ic" NAME="FloorAreaManagerTest Coverage Results" MODIFIED="1765143006918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$GoodItemTest.ic" NAME="GoodItemTest Coverage Results" MODIFIED="1764865898059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$SupermarketApp.ic" NAME="SupermarketApp Coverage Results" MODIFIED="1765180869763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.GUI.javaFX.FXMLFiles.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$managers_in_SupermarketManagement.ic" NAME="managers in SupermarketManagement Coverage Results" MODIFIED="1765142668888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/example2$AisleManagerTest.ic" NAME="AisleManagerTest Coverage Results" MODIFIED="1765142419404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$SmartAddTest.ic" NAME="SmartAddTest Coverage Results" MODIFIED="1764874089061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$models_in_SupermarketManagement.ic" NAME="models in SupermarketManagement Coverage Results" MODIFIED="1764865823748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$GoodItemManagerTest.ic" NAME="GoodItemManagerTest Coverage Results" MODIFIED="1765144774346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$ShelfManagerTest.ic" NAME="ShelfManagerTest Coverage Results" MODIFIED="1765143135319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$All_in_SupermarketManagement.ic" NAME="All in SupermarketManagement Coverage Results" MODIFIED="1765045467960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/example2$AisleTest_and_3_more.ic" NAME="AisleTest and 3 more Coverage Results" MODIFIED="1764862235733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SupermarketSystemCA1$java_in_SupermarketManagement.ic" NAME="java in SupermarketManagement Coverage Results" MODIFIED="1765295778557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/example2$SmartAddManagerTest.ic" NAME="SmartAddManagerTest Coverage Results" MODIFIED="1765144860050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$ShelfTest.ic" NAME="ShelfTest Coverage Results" MODIFIED="1764865801743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$AisleTest.ic" NAME="AisleTest Coverage Results" MODIFIED="1764863555888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$StockViewerTest.ic" NAME="StockViewerTest Coverage Results" MODIFIED="1765145518826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$StockViewerTest_displayShelfItemsWithNullShelf.ic" NAME="StockViewerTest.displayShelfItemsWithNullShelf Coverage Results" MODIFIED="1764877930122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$StockViewerTest_displayFloorAreaStock.ic" NAME="StockViewerTest.displayFloorAreaStock Coverage Results" MODIFIED="1764877998167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$StockViewerTest_testToTwoDecimalPlaces.ic" NAME="StockViewerTest.testToTwoDecimalPlaces Coverage Results" MODIFIED="1764880057388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$GoodItemTest_testUnitSizeValidation.ic" NAME="GoodItemTest.testUnitSizeValidation Coverage Results" MODIFIED="1764865206157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/example2$ShelfManagerTest_ItemOperations_addItemToShelfInsufficientSpaceFixed.ic" NAME="ShelfManagerTest$ItemOperations.addItemToShelfInsufficientSpaceFixed Coverage Results" MODIFIED="1764869912881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controllers.managers.*</FILTER>
+    </SUITE>
+  </component>
+</project>

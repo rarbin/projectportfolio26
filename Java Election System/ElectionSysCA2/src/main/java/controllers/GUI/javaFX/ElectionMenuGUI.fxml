@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.GUI.javaFX.ElectionMenuController">
+
+    <center>
+        <AnchorPane maxWidth="-Infinity" prefHeight="300.0" prefWidth="1200.0">
+            <children>
+                <TabPane fx:id="mainTabPane" layoutY="120.0" prefHeight="615.0" prefWidth="906.0"
+                         tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="politiciansTab" text="Politicians">
+                            <content>
+                                <AnchorPane prefHeight="520.0" prefWidth="865.0">
+                                    <children>
+                                        <TableView fx:id="politicianTableView" layoutX="41.0" layoutY="20.0"
+                                                   prefHeight="250.0" prefWidth="645.0">
+                                            <columns>
+                                                <TableColumn fx:id="politicianNameColumn" prefWidth="153.0"
+                                                             text="Name"/>
+                                                <TableColumn fx:id="politicianPartyColumn" prefWidth="106.0"
+                                                             text="Party"/>
+                                                <TableColumn fx:id="politicianCountyColumn" prefWidth="91.0"
+                                                             text="County"/>
+                                                <TableColumn fx:id="politicianAgeColumn" prefWidth="86.0"
+                                                             text="D.O.B."/>
+                                                <TableColumn fx:id="politicianElectionsColumn" prefWidth="105.0"
+                                                             text="Elections"/>
+                                                <TableColumn fx:id="politicianImageColumn" prefWidth="103.0"
+                                                             text="Image"/>
+                                            </columns>
+                                        </TableView>
+
+                                        <Label layoutX="41.0" layoutY="293.0" prefHeight="31.0" prefWidth="302.0"
+                                               style="-fx-font-size: 16px; -fx-font-weight: bold;"
+                                               text="Politician Info"/>
+
+                                        <GridPane hgap="10.0" layoutX="39.0" layoutY="332.0" prefHeight="154.0"
+                                                  prefWidth="647.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+
+                                            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                            <TextField fx:id="politicianNameField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="0"/>
+
+                                            <Label text="Party:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                            <TextField fx:id="politicianPartyField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="1"/>
+
+                                            <Label text="County:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                            <TextField fx:id="politicianCountyField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="2"/>
+
+                                            <Label text="DOB:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                            <TextField fx:id="politicianDOBField" GridPane.columnIndex="3"
+                                                       GridPane.rowIndex="1"/>
+
+                                            <Label text="Image URL:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                                            <TextField fx:id="politicianImageUrlField" GridPane.columnIndex="3"
+                                                       GridPane.rowIndex="0"/>
+
+                                            <AnchorPane fx:id="imagePreviewPane" prefHeight="150.0" prefWidth="160.0"
+                                                        GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                <effect>
+                                                    <BoxBlur/>
+                                                </effect>
+                                            </AnchorPane>
+                                        </GridPane>
+
+                                        <HBox layoutX="41.0" layoutY="470.0" spacing="10.0"/>
+
+                                        <VBox alignment="CENTER" layoutX="247.0" layoutY="110.0" spacing="25.0">
+                                            <padding>
+                                                <Insets bottom="30.0" top="30.0"/>
+                                            </padding>
+                                        </VBox>
+                                        <Pane layoutX="692.0" layoutY="33.0" prefHeight="460.0" prefWidth="200.0">
+                                            <children>
+                                                <Button fx:id="addPoliticianButton" layoutX="36.0" layoutY="11.0"
+                                                        mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0"
+                                                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"
+                                                        text="Add Politician"/>
+                                                <Button fx:id="updatePoliticianButton" layoutX="36.0" layoutY="91.0"
+                                                        mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0"
+                                                        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"
+                                                        text="Update Politician"/>
+                                                <Button fx:id="deletePoliticianButton" layoutX="36.0" layoutY="168.0"
+                                                        mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0"
+                                                        style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;"
+                                                        text="Delete Politician"/>
+                                                <Button fx:id="clearPoliticianFormButton" layoutX="36.0" layoutY="243.0"
+                                                        mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0"
+                                                        style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-weight: bold;"
+                                                        text="Clear Form"/>
+                                                <ImageView fx:id="politicianImageView" fitHeight="80.0" fitWidth="140.0"
+                                                           layoutX="30.0" layoutY="310.0" preserveRatio="true"/>
+                                                <Button fx:id="addImageButton" layoutX="14.0" layoutY="402.0"
+                                                        mnemonicParsing="false" prefHeight="24.0" prefWidth="80.0"
+                                                        style="-fx-background-color: #673AB7; -fx-text-fill: white;"
+                                                        text="Load Img"/>
+                                                <Button fx:id="removeImageButton" layoutX="106.0" layoutY="401.0"
+                                                        mnemonicParsing="false" prefHeight="23.0" prefWidth="80.0"
+                                                        style="-fx-background-color: #FF9800; -fx-text-fill: white;"
+                                                        text="Del Img"/>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab fx:id="electionsTab" text="Elections">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="780.0">
+                                    <children>
+                                        <TableView fx:id="electionTableView" layoutX="41.0" layoutY="20.0"
+                                                   prefHeight="200.0" prefWidth="700.0">
+                                            <columns>
+                                                <TableColumn fx:id="electionTypeColumn" prefWidth="120.0" text="Type"/>
+                                                <TableColumn fx:id="electionLocationColumn" prefWidth="150.0"
+                                                             text="Location"/>
+                                                <TableColumn fx:id="electionYearColumn" prefWidth="80.0" text="Year"/>
+                                                <TableColumn fx:id="electionDateColumn" prefWidth="120.0" text="Date"/>
+                                                <TableColumn fx:id="electionSeatsColumn" prefWidth="80.0" text="Seats"/>
+                                                <TableColumn fx:id="electionCandidatesColumn" prefWidth="100.0"
+                                                             text="Candidates"/>
+                                                <TableColumn fx:id="electionWinnerColumn" prefWidth="150.0"
+                                                             text="Winner"/>
+                                            </columns>
+                                        </TableView>
+
+                                        <Label layoutX="41.0" layoutY="240.0"
+                                               style="-fx-font-size: 18px; -fx-font-weight: bold;"
+                                               text="Election Details"/>
+
+                                        <GridPane hgap="10.0" layoutX="41.0" layoutY="293.0" prefHeight="155.0"
+                                                  prefWidth="436.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+
+                                            <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                            <ComboBox fx:id="electionTypeComboBox" GridPane.columnIndex="1"
+                                                      GridPane.rowIndex="0"/>
+
+                                            <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                            <TextField fx:id="electionLocationField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="1"/>
+
+                                            <Label text="Year:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                            <TextField fx:id="electionYearField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="2"/>
+
+                                            <Label text="Month:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                                            <TextField fx:id="electionMonthField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="3"/>
+
+                                            <Label text="Day:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                            <TextField fx:id="electionDayField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="4"/>
+
+                                            <Label text="Seats Available:" GridPane.columnIndex="0"
+                                                   GridPane.rowIndex="5"/>
+                                            <TextField fx:id="electionSeatsField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="5"/>
+                                        </GridPane>
+
+                                        <HBox layoutX="289.0" layoutY="244.0" prefHeight="38.0" prefWidth="544.0"
+                                              spacing="10.0">
+                                            <Button fx:id="addElectionButton" mnemonicParsing="false" prefHeight="40.0"
+                                                    prefWidth="150.0"
+                                                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Add Election"/>
+                                            <Button fx:id="updateElectionButton" mnemonicParsing="false"
+                                                    prefHeight="40.0" prefWidth="150.0"
+                                                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Update Election"/>
+                                            <Button fx:id="deleteElectionButton" mnemonicParsing="false"
+                                                    prefHeight="40.0" prefWidth="150.0"
+                                                    style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Delete Election"/>
+                                            <Button fx:id="clearElectionFormButton" mnemonicParsing="false"
+                                                    prefHeight="40.0" prefWidth="150.0"
+                                                    style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Clear Form"/>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab fx:id="candidatesTab" text="Candidates">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="780.0">
+                                    <children>
+                                        <TableView fx:id="candidateTableView" layoutX="41.0" layoutY="20.0"
+                                                   prefHeight="200.0" prefWidth="700.0">
+                                            <columns>
+                                                <TableColumn fx:id="candidateNameColumn" prefWidth="150.0"
+                                                             text="Politician"/>
+                                                <TableColumn fx:id="candidateElectionColumn" prefWidth="200.0"
+                                                             text="Election"/>
+                                                <TableColumn fx:id="candidatePartyColumn" prefWidth="120.0"
+                                                             text="Party"/>
+                                                <TableColumn fx:id="candidateVotesColumn" prefWidth="80.0"
+                                                             text="Votes"/>
+                                                <TableColumn fx:id="candidateWinnerColumn" prefWidth="80.0"
+                                                             text="Winner"/>
+                                            </columns>
+                                        </TableView>
+
+                                        <Label layoutX="41.0" layoutY="240.0"
+                                               style="-fx-font-size: 18px; -fx-font-weight: bold;"
+                                               text="Candidate Details"/>
+
+                                        <GridPane hgap="10.0" layoutX="41.0" layoutY="280.0" prefHeight="170.0"
+                                                  prefWidth="400.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+
+                                            <Label text="Politician:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                            <ComboBox fx:id="candidatePoliticianComboBox" GridPane.columnIndex="1"
+                                                      GridPane.rowIndex="0"/>
+
+                                            <Label text="Election:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                            <ComboBox fx:id="candidateElectionComboBox" GridPane.columnIndex="1"
+                                                      GridPane.rowIndex="1"/>
+
+                                            <Label text="Party:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                            <ComboBox fx:id="candidatePartyComboBox" GridPane.columnIndex="1"
+                                                      GridPane.rowIndex="2"/>
+
+                                            <Label text="Votes Received:" GridPane.columnIndex="0"
+                                                   GridPane.rowIndex="3"/>
+                                            <TextField fx:id="candidateVotesField" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="3"/>
+
+                                            <Label text="Is Winner?" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                            <CheckBox fx:id="candidateWinnerCheckBox" GridPane.columnIndex="1"
+                                                      GridPane.rowIndex="4"/>
+                                        </GridPane>
+
+                                        <HBox layoutX="282.0" layoutY="238.0" prefHeight="37.0" prefWidth="586.0"
+                                              spacing="10.0">
+                                            <Button fx:id="addCandidateButton" mnemonicParsing="false" prefHeight="59.0"
+                                                    prefWidth="140.0"
+                                                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Add Candidate"/>
+                                            <Button fx:id="updateCandidateButton" mnemonicParsing="false"
+                                                    prefHeight="45.0" prefWidth="151.0"
+                                                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Update Candidate"/>
+                                            <Button fx:id="deleteCandidateButton" mnemonicParsing="false"
+                                                    prefHeight="58.0" prefWidth="137.0"
+                                                    style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Delete Candidate"/>
+                                            <Button fx:id="clearCandidateFormButton" mnemonicParsing="false"
+                                                    prefHeight="125.0" prefWidth="153.0"
+                                                    style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                                                    text="Clear Form"/>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab fx:id="searchSortTab" text="Search &amp; Sort">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="906.0">
+                                    <children>
+                                        <TabPane fx:id="searchTabPane" layoutX="0" layoutY="0" prefWidth="906.0"
+                                                 prefHeight="580.0"
+                                                 AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                                                 AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                                            <tabs>
+                                                <Tab text="Search Politicians">
+                                                    <content>
+                                                        <AnchorPane>
+                                                            <GridPane hgap="10" layoutX="10" layoutY="10" vgap="10">
+                                                                <columnConstraints>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100"
+                                                                                       prefWidth="120"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150"
+                                                                                       prefWidth="200"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100"
+                                                                                       prefWidth="120"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150"
+                                                                                       prefWidth="200"/>
+                                                                </columnConstraints>
+                                                                <rowConstraints>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="200" prefHeight="200"
+                                                                                    vgrow="ALWAYS"/>
+                                                                </rowConstraints>
+
+                                                                <Label text="Name:" GridPane.columnIndex="0"
+                                                                       GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="searchPoliticianName"
+                                                                           promptText="Enter name..."
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.rowIndex="0"/>
+                                                                <Label text="Party:" GridPane.columnIndex="2"
+                                                                       GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="searchPoliticianParty"
+                                                                           promptText="Enter party..."
+                                                                           GridPane.columnIndex="3"
+                                                                           GridPane.rowIndex="0"/>
+
+                                                                <Label text="County:" GridPane.columnIndex="0"
+                                                                       GridPane.rowIndex="1"/>
+                                                                <TextField fx:id="searchPoliticianCounty"
+                                                                           promptText="Enter county..."
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.rowIndex="1"/>
+
+                                                                <Button fx:id="searchPoliticiansBtn"
+                                                                        text="Search Politicians"
+                                                                        GridPane.columnIndex="0" GridPane.columnSpan="2"
+                                                                        GridPane.rowIndex="2"/>
+                                                                <Button fx:id="showAllPoliticiansBtn" text="Show All"
+                                                                        GridPane.columnIndex="2" GridPane.columnSpan="2"
+                                                                        GridPane.rowIndex="2"/>
+
+                                                                <TextArea fx:id="politicianSearchResults"
+                                                                          editable="false" wrapText="true"
+                                                                          GridPane.columnIndex="0"
+                                                                          GridPane.columnSpan="4"
+                                                                          GridPane.rowIndex="3"/>
+                                                            </GridPane>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+
+                                                <Tab text="Search Elections">
+                                                    <content>
+                                                        <AnchorPane>
+                                                            <GridPane hgap="10" layoutX="10" layoutY="10" vgap="10">
+                                                                <columnConstraints>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100"
+                                                                                       prefWidth="120"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150"
+                                                                                       prefWidth="200"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100"
+                                                                                       prefWidth="120"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150"
+                                                                                       prefWidth="200"/>
+                                                                </columnConstraints>
+                                                                <rowConstraints>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="200" prefHeight="200"
+                                                                                    vgrow="ALWAYS"/>
+                                                                </rowConstraints>
+
+                                                                <Label text="Type:" GridPane.columnIndex="0"
+                                                                       GridPane.rowIndex="0"/>
+                                                                <ComboBox fx:id="searchElectionType"
+                                                                          promptText="Select type..."
+                                                                          GridPane.columnIndex="1"
+                                                                          GridPane.rowIndex="0"/>
+                                                                <Label text="Year:" GridPane.columnIndex="2"
+                                                                       GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="searchElectionYear"
+                                                                           promptText="e.g., 2020"
+                                                                           GridPane.columnIndex="3"
+                                                                           GridPane.rowIndex="0"/>
+
+                                                                <Label text="Location:" GridPane.columnIndex="0"
+                                                                       GridPane.rowIndex="1"/>
+                                                                <TextField fx:id="searchElectionLocation"
+                                                                           promptText="Enter location..."
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.rowIndex="1"/>
+
+                                                                <Button fx:id="searchElectionsBtn"
+                                                                        text="Search Elections" GridPane.columnIndex="0"
+                                                                        GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                                                                <Button fx:id="showAllElectionsBtn" text="Show All"
+                                                                        GridPane.columnIndex="2" GridPane.columnSpan="2"
+                                                                        GridPane.rowIndex="2"/>
+
+                                                                <TextArea fx:id="electionSearchResults" editable="false"
+                                                                          wrapText="true" GridPane.columnIndex="0"
+                                                                          GridPane.columnSpan="4"
+                                                                          GridPane.rowIndex="3"/>
+                                                            </GridPane>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+
+                                                <Tab text="Search Candidates">
+                                                    <content>
+                                                        <AnchorPane>
+                                                            <GridPane hgap="10" layoutX="10" layoutY="10" vgap="10">
+                                                                <columnConstraints>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100"
+                                                                                       prefWidth="120"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150"
+                                                                                       prefWidth="200"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100"
+                                                                                       prefWidth="120"/>
+                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150"
+                                                                                       prefWidth="200"/>
+                                                                </columnConstraints>
+                                                                <rowConstraints>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="30" prefHeight="30"/>
+                                                                    <RowConstraints minHeight="200" prefHeight="200"
+                                                                                    vgrow="ALWAYS"/>
+                                                                </rowConstraints>
+
+                                                                <Label text="Party:" GridPane.columnIndex="0"
+                                                                       GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="searchCandidateParty"
+                                                                           promptText="Enter party..."
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.rowIndex="0"/>
+                                                                <Label text="Year:" GridPane.columnIndex="2"
+                                                                       GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="searchCandidateYear"
+                                                                           promptText="e.g., 2020"
+                                                                           GridPane.columnIndex="3"
+                                                                           GridPane.rowIndex="0"/>
+                                                                <Label text="Type:" GridPane.columnIndex="0"
+                                                                       GridPane.rowIndex="1"/>
+                                                                <ComboBox fx:id="searchCandidateElectionType"
+                                                                          promptText="Select type..."
+                                                                          GridPane.columnIndex="1"
+                                                                          GridPane.rowIndex="1"/>
+
+
+                                                                <Button fx:id="searchCandidatesBtn"
+                                                                        text="Search Candidates"
+                                                                        GridPane.columnIndex="0" GridPane.columnSpan="2"
+                                                                        GridPane.rowIndex="2"/>
+                                                                <Button fx:id="showAllCandidatesBtn" text="Show All"
+                                                                        GridPane.columnIndex="2" GridPane.columnSpan="2"
+                                                                        GridPane.rowIndex="2"/>
+
+                                                                <TextArea fx:id="candidateSearchResults"
+                                                                          editable="false" wrapText="true"
+                                                                          GridPane.columnIndex="0"
+                                                                          GridPane.columnSpan="4"
+                                                                          GridPane.rowIndex="3"/>
+                                                            </GridPane>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+
+                                                <Tab text="Sorting">
+                                                    <content>
+                                                        <AnchorPane>
+                                                            <ScrollPane fitToWidth="true" fitToHeight="true"
+                                                                        hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+                                                                <VBox spacing="10" xmlns="http://javafx.com/javafx/17"
+                                                                      xmlns:fx="http://javafx.com/fxml/1">
+                                                                    <padding>
+                                                                        <Insets top="10" right="10" bottom="10"
+                                                                                left="10"/>
+                                                                    </padding>
+
+                                                                    <GridPane hgap="10" vgap="10" prefWidth="740">
+                                                                        <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES"
+                                                                                               minWidth="150"
+                                                                                               prefWidth="200"/>
+                                                                            <ColumnConstraints hgrow="SOMETIMES"
+                                                                                               minWidth="100"
+                                                                                               prefWidth="120"/>
+                                                                            <ColumnConstraints hgrow="SOMETIMES"
+                                                                                               minWidth="150"
+                                                                                               prefWidth="200"/>
+                                                                        </columnConstraints>
+                                                                        <rowConstraints>
+                                                                            <RowConstraints minHeight="30"
+                                                                                            prefHeight="30"/>
+                                                                            <RowConstraints minHeight="30"
+                                                                                            prefHeight="30"/>
+                                                                            <RowConstraints minHeight="30"
+                                                                                            prefHeight="30"/>
+                                                                            <RowConstraints minHeight="30"
+                                                                                            prefHeight="30"/>
+                                                                            <RowConstraints minHeight="30"
+                                                                                            prefHeight="30"/>
+                                                                            <RowConstraints minHeight="30"
+                                                                                            prefHeight="30"/>
+                                                                        </rowConstraints>
+
+                                                                        <Label text="Sort Politicians By:"
+                                                                               GridPane.columnIndex="0"
+                                                                               GridPane.rowIndex="0"/>
+                                                                        <ComboBox fx:id="sortPoliticianBy"
+                                                                                  GridPane.columnIndex="1"
+                                                                                  GridPane.rowIndex="0" prefWidth="200">
+                                                                            <items>
+                                                                            </items>
+                                                                        </ComboBox>
+                                                                        <HBox spacing="5" GridPane.columnIndex="2"
+                                                                              GridPane.rowIndex="0">
+                                                                            <RadioButton fx:id="politicianAsc"
+                                                                                         selected="true"
+                                                                                         text="Ascending"/>
+                                                                            <RadioButton fx:id="politicianDesc"
+                                                                                         text="Descending"/>
+                                                                        </HBox>
+
+                                                                        <Button fx:id="sortPoliticiansBtn"
+                                                                                text="Sort Politicians"
+                                                                                GridPane.columnIndex="0"
+                                                                                GridPane.rowIndex="1" prefWidth="200"/>
+
+                                                                        <Label text="Sort Elections By:"
+                                                                               GridPane.columnIndex="0"
+                                                                               GridPane.rowIndex="2"/>
+                                                                        <ComboBox fx:id="sortElectionBy"
+                                                                                  GridPane.columnIndex="1"
+                                                                                  GridPane.rowIndex="2" prefWidth="200">
+                                                                            <items>
+                                                                            </items>
+                                                                        </ComboBox>
+                                                                        <HBox spacing="5" GridPane.columnIndex="2"
+                                                                              GridPane.rowIndex="2">
+                                                                            <RadioButton fx:id="electionAsc"
+                                                                                         selected="true"
+                                                                                         text="Ascending"/>
+                                                                            <RadioButton fx:id="electionDesc"
+                                                                                         text="Descending"/>
+                                                                        </HBox>
+                                                                        <Button fx:id="sortElectionsBtn"
+                                                                                text="Sort Elections"
+                                                                                GridPane.columnIndex="0"
+                                                                                GridPane.rowIndex="3" prefWidth="200"/>
+
+                                                                        <Label text="Sort Candidates By:"
+                                                                               GridPane.columnIndex="0"
+                                                                               GridPane.rowIndex="4"/>
+                                                                        <ComboBox fx:id="sortCandidateBy"
+                                                                                  GridPane.columnIndex="1"
+                                                                                  GridPane.rowIndex="4" prefWidth="200">
+                                                                            <items>
+                                                                            </items>
+                                                                        </ComboBox>
+                                                                        <HBox spacing="4" GridPane.columnIndex="2"
+                                                                              GridPane.rowIndex="4">
+                                                                            <RadioButton fx:id="candidateAsc"
+                                                                                         selected="true"
+                                                                                         text="Ascending"/>
+                                                                            <RadioButton fx:id="candidateDesc"
+                                                                                         text="Descending"/>
+                                                                        </HBox>
+                                                                        <Button fx:id="sortCandidatesBtn"
+                                                                                text="Sort Candidates"
+                                                                                GridPane.columnIndex="0"
+                                                                                GridPane.rowIndex="5" prefWidth="200"/>
+                                                                    </GridPane>
+
+                                                                    <Label fx:id="sortingResultsLabel"
+                                                                           style="-fx-font-weight: bold; -fx-font-size: 14px;"
+                                                                           text="Sorted Results:"/>
+
+                                                                    <ScrollPane fitToWidth="true" prefHeight="300"
+                                                                                vbarPolicy="AS_NEEDED"
+                                                                                hbarPolicy="AS_NEEDED">
+                                                                        <TableView fx:id="sortingResultsTableView"
+                                                                                   prefWidth="740">
+                                                                            <columns>
+                                                                                <TableColumn
+                                                                                        fx:id="sortResultTypeColumn"
+                                                                                        prefWidth="120" text="Type"/>
+                                                                                <TableColumn
+                                                                                        fx:id="sortResultNameColumn"
+                                                                                        prefWidth="200" text="Name"/>
+                                                                                <TableColumn
+                                                                                        fx:id="sortResultDetailsColumn"
+                                                                                        prefWidth="250" text="Details"/>
+                                                                                <TableColumn
+                                                                                        fx:id="sortResultWinnerColumn"
+                                                                                        prefWidth="150" text="Winner"/>
+                                                                            </columns>
+                                                                        </TableView>
+                                                                    </ScrollPane>
+                                                                </VBox>
+                                                            </ScrollPane>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+                                            </tabs>
+                                        </TabPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+
+                        <Tab fx:id="statisticsTab" text="Statistics &amp; Reports">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="535.0" prefWidth="906.0">
+                                    <children>
+                                        <Label layoutX="41.0" layoutY="12.0" prefHeight="45.0" prefWidth="379.0"
+                                               style="-fx-font-size: 18px; -fx-font-weight: bold;"
+                                               text="Election System Reports"/>
+
+                                        <VBox layoutX="41.0" layoutY="55.0" prefHeight="475.0" prefWidth="357.0"
+                                              spacing="15">
+                                            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;"
+                                                   text="Basic Statistics"/>
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="overallStatsBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="147.0" text="System Overview">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="politicianStatsBtn" mnemonicParsing="false"
+                                                        prefHeight="40" prefWidth="147.0" text="Politician Stats">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="electionStatsBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="147.0" text="Election Stats">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="candidateStatsBtn" mnemonicParsing="false"
+                                                        prefHeight="40" prefWidth="147.0" text="Candidate Stats">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20 0 0 0;"
+                                                   text="Analysis Reports"/>
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="partyStatsBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="147.0" text="Party Analysis">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="countyAnalysisBtn" mnemonicParsing="false"
+                                                        prefHeight="40" prefWidth="147.0" text="County Analysis">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <HBox prefHeight="40.0" prefWidth="645.0" spacing="10">
+                                                <Button fx:id="yearStatsBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="147.0" text="Year Analysis">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="locationStatsBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="147.0" text="Location Analysis">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+
+                                        </VBox>
+                                        <VBox layoutX="486.0" layoutY="28.0" prefHeight="421.0" prefWidth="389.0"
+                                              spacing="15">
+                                            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20 0 0 0;"
+                                                   text="Top Performance Reports"/>
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="topVotesBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="147.0" text="Top by Votes">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="topWinsBtn" mnemonicParsing="false" prefHeight="40"
+                                                        prefWidth="141.0" text="Top by Wins">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0"/>
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+                                            <Label prefHeight="45.0" prefWidth="148.0"
+                                                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20 0 0 0;"
+                                                   text="Full Reports"/>
+
+                                            <Button fx:id="fullReportBtn" mnemonicParsing="false" prefHeight="40"
+                                                    prefWidth="185.0" text="Full System Report">
+                                                <font>
+                                                    <Font name="Nirmala UI" size="14.0"/>
+                                                </font>
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND"/>
+                                                </cursor>
+                                            </Button>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+
+            </children>
+        </AnchorPane>
+    </center>
+    <top>
+        <Pane prefHeight="106.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f4fb0" height="112.0" layoutY="-2.0" stroke="BLACK"
+                           strokeType="INSIDE" width="905.0"/>
+                <Button fx:id="resetButton" layoutX="550.0" layoutY="31.0" mnemonicParsing="false" prefHeight="44.0"
+                        prefWidth="156.0" text="RESET">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="electionMapButton" layoutX="23.0" layoutY="31.0" mnemonicParsing="false"
+                        prefHeight="43.0" prefWidth="153.0" text="MAP VIEW">
+                    <font>
+                        <Font name="Nirmala UI" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="loadButton" layoutX="203.0" layoutY="31.0" mnemonicParsing="false" prefHeight="43.0"
+                        prefWidth="151.0" text="LOAD">
+                    <font>
+                        <Font name="Nirmala UI" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="saveButton" layoutX="374.0" layoutY="31.0" mnemonicParsing="false" prefHeight="35.0"
+                        prefWidth="149.0" text="SAVE">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="exitButton" layoutX="732.0" layoutY="31.0" mnemonicParsing="false" prefHeight="34.0"
+                        prefWidth="147.0" text="EXIT">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </Pane>
+    </top>
+</BorderPane>

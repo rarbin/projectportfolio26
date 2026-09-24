@@ -1,0 +1,158 @@
+<dataWrapper>
+  <floorAreas>
+    <head>
+      <next>
+        <prev reference="../.."/>
+        <value class="models.FloorArea">
+          <title>Area1</title>
+          <level>2</level>
+          <dimensions>
+            <length>32.0</length>
+            <width>20.0</width>
+            <posX>3.0</posX>
+            <posY>4.0</posY>
+            <orientation>43.0</orientation>
+          </dimensions>
+          <aisle>
+            <head>
+              <value class="models.Aisle">
+                <dimensions>
+                  <length>32.0</length>
+                  <width>32.0</width>
+                  <posX>5.0</posX>
+                  <posY>8.0</posY>
+                  <orientation>32.0</orientation>
+                </dimensions>
+                <id>1000</id>
+                <name>Aisle2</name>
+                <temperature>REFRIGERATED</temperature>
+                <floorArea reference="../../../.."/>
+                <shelves>
+                  <size>0</size>
+                </shelves>
+              </value>
+            </head>
+            <tail reference="../head"/>
+            <size>1</size>
+          </aisle>
+        </value>
+      </next>
+      <value class="models.FloorArea">
+        <title>Confectionary</title>
+        <level>2</level>
+        <dimensions>
+          <length>41.0</length>
+          <width>45.0</width>
+          <posX>2.0</posX>
+          <posY>43.0</posY>
+          <orientation>43.2</orientation>
+        </dimensions>
+        <aisle>
+          <head>
+            <value class="models.Aisle">
+              <dimensions>
+                <length>34.0</length>
+                <width>32.0</width>
+                <posX>3.0</posX>
+                <posY>56.0</posY>
+                <orientation>43.0</orientation>
+              </dimensions>
+              <id>1000</id>
+              <name>Snacks</name>
+              <temperature>UNREFRIGERATED</temperature>
+              <floorArea reference="../../../.."/>
+              <shelves>
+                <head>
+                  <next>
+                    <prev reference="../.."/>
+                    <value class="models.Shelf">
+                      <capacity>34.0</capacity>
+                      <shelfNumber>0</shelfNumber>
+                      <currentWeight>0.0</currentWeight>
+                      <currentQuantity>3</currentQuantity>
+                      <aisle reference="../../../../.."/>
+                      <items>
+                        <size>0</size>
+                      </items>
+                    </value>
+                  </next>
+                  <value class="models.Shelf">
+                    <capacity>34.0</capacity>
+                    <shelfNumber>0</shelfNumber>
+                    <currentWeight>0.105</currentWeight>
+                    <currentQuantity>3</currentQuantity>
+                    <aisle reference="../../../.."/>
+                    <items>
+                      <head>
+                        <value class="models.GoodItem">
+                          <storageTemp>43.0</storageTemp>
+                          <description>Biscuits</description>
+                          <unitSize>35.0</unitSize>
+                          <unitPrice>32.0</unitPrice>
+                          <quantity>3</quantity>
+                          <photoUrl></photoUrl>
+                          <aisle reference="../../../../../../.."/>
+                          <shelves>
+                            <size>0</size>
+                          </shelves>
+                        </value>
+                      </head>
+                      <tail reference="../head"/>
+                      <size>1</size>
+                    </items>
+                  </value>
+                </head>
+                <tail reference="../head/next"/>
+                <size>2</size>
+              </shelves>
+            </value>
+          </head>
+          <tail reference="../head"/>
+          <size>1</size>
+        </aisle>
+      </value>
+    </head>
+    <tail reference="../head/next"/>
+    <size>2</size>
+  </floorAreas>
+  <aisles>
+    <head>
+      <next>
+        <prev reference="../.."/>
+        <value class="models.Aisle" reference="../../../../floorAreas/head/next/value/aisle/head/value"/>
+      </next>
+      <value class="models.Aisle" reference="../../../floorAreas/head/value/aisle/head/value"/>
+    </head>
+    <tail reference="../head/next"/>
+    <size>2</size>
+  </aisles>
+  <shelves>
+    <head>
+      <value class="models.Shelf" reference="../../../floorAreas/head/value/aisle/head/value/shelves/head/value"/>
+    </head>
+    <tail reference="../head"/>
+    <size>1</size>
+  </shelves>
+  <goodItems>
+    <head>
+      <next>
+        <prev reference="../.."/>
+        <value class="models.GoodItem">
+          <storageTemp>4.0</storageTemp>
+          <description>item2</description>
+          <unitSize>3.0</unitSize>
+          <unitPrice>43.0</unitPrice>
+          <quantity>3</quantity>
+          <photoUrl>no photo.</photoUrl>
+          <aisle reference="../../../../../floorAreas/head/next/value/aisle/head/value"/>
+          <shelves>
+            <size>0</size>
+          </shelves>
+        </value>
+      </next>
+      <value class="models.GoodItem" reference="../../../floorAreas/head/value/aisle/head/value/shelves/head/value/items/head/value"/>
+    </head>
+    <tail reference="../head/next"/>
+    <size>2</size>
+  </goodItems>
+</dataWrapper>

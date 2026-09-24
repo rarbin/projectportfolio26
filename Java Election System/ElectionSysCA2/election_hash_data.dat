@@ -1,0 +1,78 @@
+# Election System Data - Simple Format
+# POLITICIANS: id,name,dob,party,county,image
+P,885376173,Micheál Martin,1960-08-01,Fianna Fáil,Cork,
+P,1405290397,Leo Varadkar,1979-01-18,Fine Gael,Dublin,
+P,597121944,Mary Lou McDonald,1969-05-01,Sinn Féin,Dublin,
+P,1987442389,Eamon Ryan,1963-06-28,Green Party,Dublin,
+P,2099151330,Alan Kelly,1975-08-10,Labour Party,Tipperary,
+P,699353909,Mattie McGrath,1961-07-20,Independent,Tipperary,
+P,1336817620,Simon Harris,1986-10-17,Fine Gael,Wicklow,
+P,107187738,Ivana Bacik,1968-05-25,Labour Party,Dublin,
+P,579787288,Paul Murphy,1983-10-31,People Before Profit,Dublin,
+P,2090277894,Michael Healy-Rae,1967-01-09,Independent,Kerry,
+P,1886429457,Danny Healy-Rae,1962-01-25,Independent,Kerry,
+P,671995612,Catherine Connolly,1960-06-01,Independent,Galway,
+P,1196472265,Peadar Tóibín,1974-06-18,Aontú,Meath,
+P,896674529,Holly Cairns,1989-03-24,Social Democrats,Cork,
+P,193744242,Richard Boyd Barrett,1967-05-01,People Before Profit,Dublin,
+P,539984978,Róisín Shortall,1954-03-25,Social Democrats,Dublin,
+P,1352657071,Bríd Smith,1958-08-08,People Before Profit,Dublin,
+P,81632727,Gino Kenny,1972-08-01,People Before Profit,Dublin,
+# ELECTIONS: id,type,location,date,seats
+E,1226946483,General Election,Dublin,2020-02-08,160
+E,6655851,Local Election,Cork,2019-05-24,31
+E,2095449342,European Election,Ireland South,2019-05-24,5
+E,101223930,Presidential Election,Nationwide,2018-10-26,1
+E,1120939687,General Election,Dublin West,2020-02-08,4
+E,1860370241,General Election,Cork South-Central,2020-02-08,4
+E,586143639,General Election,Kerry,2020-02-08,5
+E,1615522157,Local Election,Galway,2019-05-24,18
+E,598492885,Local Election,Dublin,2019-05-24,63
+E,1515044118,European Election,Dublin,2019-05-24,4
+E,105024167,Presidential Election,Nationwide,2011-10-27,1
+# CANDIDATES: politicianId,electionId,party,votes,winner
+C,885376173,1226946483,Fianna Fáil,8564,1
+C,1405290397,1226946483,Fine Gael,8011,1
+C,597121944,1226946483,Sinn Féin,9921,1
+C,1987442389,1226946483,Green Party,7456,1
+C,2099151330,1226946483,Labour Party,4123,1
+C,699353909,1226946483,Independent,2890,1
+C,1336817620,1226946483,Fine Gael,7123,1
+C,107187738,1226946483,Labour Party,3987,1
+C,579787288,1226946483,People Before Profit,5210,1
+C,2090277894,1226946483,Independent,10567,1
+C,1886429457,1226946483,Independent,9876,1
+C,671995612,1226946483,Independent,5432,1
+C,1196472265,1226946483,Aontú,3210,1
+C,896674529,1226946483,Social Democrats,4789,1
+C,193744242,1226946483,People Before Profit,5678,1
+C,539984978,1226946483,Social Democrats,4321,1
+C,1352657071,1226946483,People Before Profit,3456,1
+C,81632727,1226946483,People Before Profit,2987,1
+C,885376173,6655851,Fianna Fáil,4500,0
+C,1405290397,6655851,Fine Gael,4200,0
+C,597121944,2095449342,Sinn Féin,123456,0
+C,1987442389,2095449342,Green Party,98765,0
+C,885376173,101223930,Fianna Fáil,822566,0
+C,1405290397,101223930,Fine Gael,936854,1
+C,1336817620,1120939687,Fine Gael,12567,1
+C,579787288,1120939687,People Before Profit,9876,1
+C,193744242,1120939687,People Before Profit,8765,1
+C,81632727,1120939687,People Before Profit,6543,1
+C,885376173,1860370241,Fianna Fáil,15678,0
+C,896674529,1860370241,Social Democrats,12345,0
+C,2090277894,586143639,Independent,23456,0
+C,1886429457,586143639,Independent,19876,0
+C,671995612,1615522157,Independent,8765,0
+C,1196472265,1615522157,Aontú,5432,0
+C,1405290397,598492885,Fine Gael,9876,0
+C,597121944,598492885,Sinn Féin,8765,0
+C,1987442389,598492885,Green Party,7654,0
+C,1336817620,598492885,Fine Gael,6543,0
+C,107187738,598492885,Labour Party,5432,0
+C,579787288,598492885,People Before Profit,4321,0
+C,193744242,598492885,People Before Profit,3210,0
+C,539984978,1515044118,Social Democrats,123456,0
+C,2099151330,105024167,Labour Party,489123,0
+C,885376173,105024167,Fianna Fáil,512345,0
+C,1405290397,105024167,Fine Gael,598765,0

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="800.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.GUI.javaFX.MapController">
+
+    <top>
+        <VBox>
+            <MenuBar fx:id="controls">
+                <menus>
+                    <Menu mnemonicParsing="false" text="View">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="Zoom In" onAction="#handleZoomIn"/>
+                            <MenuItem mnemonicParsing="false" text="Zoom Out" onAction="#handleZoomOut"/>
+                            <MenuItem mnemonicParsing="false" text="Reset View" onAction="#handleResetView"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+
+            <HBox style="-fx-background-color: #f0f0f0; -fx-padding: 5;" spacing="10">
+                <Label fx:id="statusLabel" text="Welcome to Supermarket Map"/>
+                <Label fx:id="totalLabel" text="Total: 0 floor areas, 0 aisles, 0 shelves, 0 items"/>
+                <Button fx:id="backButton" text="Back" onAction="#handleBack"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <left>
+        <VBox prefWidth="250.0">
+            <Accordion fx:id="navigationAccordion">
+                <panes>
+                    <TitledPane fx:id="floorAreaPane" animated="false" text="Floor Areas">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0">
+                                <ListView fx:id="floorAreaListView"
+                                          AnchorPane.topAnchor="0.0"
+                                          AnchorPane.bottomAnchor="0.0"
+                                          AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0"/>
+                            </AnchorPane>
+                        </content>
+                        <font>
+                            <Font name="Arial" size="12.0"/>
+                        </font>
+                    </TitledPane>
+                    <TitledPane fx:id="aislesPane" animated="false" text="Aisles">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0">
+                                <ListView fx:id="aisleListView"
+                                          AnchorPane.topAnchor="0.0"
+                                          AnchorPane.bottomAnchor="0.0"
+                                          AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0"/>
+                            </AnchorPane>
+                        </content>
+                        <font>
+                            <Font name="Arial" size="12.0"/>
+                        </font>
+                    </TitledPane>
+                    <TitledPane fx:id="shelvesPane" animated="false" text="Shelves">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0">
+                                <ListView fx:id="shelfListView"
+                                          AnchorPane.topAnchor="0.0"
+                                          AnchorPane.bottomAnchor="0.0"
+                                          AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0"/>
+                            </AnchorPane>
+                        </content>
+                        <font>
+                            <Font name="Arial" size="12.0"/>
+                        </font>
+                    </TitledPane>
+                    <TitledPane fx:id="itemsPane" animated="false" text="Items">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0">
+                                <ListView fx:id="itemListView"
+                                          AnchorPane.topAnchor="0.0"
+                                          AnchorPane.bottomAnchor="0.0"
+                                          AnchorPane.leftAnchor="0.0"
+                                          AnchorPane.rightAnchor="0.0"/>
+                            </AnchorPane>
+                        </content>
+                        <font>
+                            <Font name="Arial" size="12.0"/>
+                        </font>
+                    </TitledPane>
+                </panes>
+            </Accordion>
+            <TitledPane text="Statistics" expanded="true" collapsible="false">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0">
+                        <TextArea fx:id="statsDisplay"
+                                  editable="false"
+                                  wrapText="true"
+                                  AnchorPane.topAnchor="0.0"
+                                  AnchorPane.bottomAnchor="0.0"
+                                  AnchorPane.leftAnchor="0.0"
+                                  AnchorPane.rightAnchor="0.0"/>
+                    </AnchorPane>
+                </content>
+                <font>
+                    <Font name="Arial" size="12.0"/>
+                </font>
+            </TitledPane>
+        </VBox>
+    </left>
+    <right>
+        <VBox prefWidth="300.0" spacing="10">
+            <TitledPane text="Stock Viewer" expanded="true" collapsible="true">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0">
+                        <TextArea fx:id="stockViewerDisplay"
+                                  editable="false"
+                                  wrapText="true"
+                                  AnchorPane.topAnchor="0.0"
+                                  AnchorPane.bottomAnchor="0.0"
+                                  AnchorPane.leftAnchor="0.0"
+                                  AnchorPane.rightAnchor="0.0"/>
+                    </AnchorPane>
+                </content>
+                <font>
+                    <Font name="Arial" size="12.0"/>
+                </font>
+            </TitledPane>
+            <TitledPane text="Quick Actions" expanded="true" collapsible="true">
+                <content>
+                    <VBox spacing="5" style="-fx-padding: 10;">
+                        <Button text="Zoom In" onAction="#handleZoomIn"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+                        <Button text="Zoom Out" onAction="#handleZoomOut"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+                        <Button text="Reset View" onAction="#handleResetView"
+                                style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+                    </VBox>
+                </content>
+                <font>
+                    <Font name="Arial" size="12.0"/>
+                </font>
+            </TitledPane>
+        </VBox>
+    </right>
+
+    <center>
+        <ScrollPane fx:id="mapScrollPane">
+            <content>
+                <Pane style="-fx-background-color: white;">
+                    <Canvas fx:id="mapCanvas" width="1000" height="700"/>
+                </Pane>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <VBox>
+            <TitledPane text="Details" expanded="true" collapsible="true">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0">
+                        <TextArea fx:id="detailsDisplay"
+                                  editable="false"
+                                  wrapText="true"
+                                  AnchorPane.topAnchor="0.0"
+                                  AnchorPane.bottomAnchor="0.0"
+                                  AnchorPane.leftAnchor="0.0"
+                                  AnchorPane.rightAnchor="0.0"/>
+                    </AnchorPane>
+                </content>
+                <font>
+                    <Font name="Arial" size="12.0"/>
+                </font>
+            </TitledPane>
+        </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GUI.javaFX.MenuController">
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <TabPane fx:id="mainTabPane" layoutY="8.0" prefHeight="600.0" prefWidth="702.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="itemsTab" text="Items">
+                            <content>
+                                <AnchorPane minWidth="-Infinity" prefHeight="544.0" prefWidth="748.0">
+                                    <children>
+                                        <TableView fx:id="itemTableView" layoutX="41.0" layoutY="20.0" prefHeight="250.0" prefWidth="605.0">
+                                            <columns>
+                                                <TableColumn fx:id="nameColumn" prefWidth="153.0" text="Name" />
+                                                <TableColumn fx:id="tempColumn" prefWidth="106.0" text="Temp" />
+                                                <TableColumn fx:id="weightColumn" prefWidth="91.0" text="Weight" />
+                                                <TableColumn fx:id="priceColumn" prefWidth="95.0" text="Price" />
+                                                <TableColumn fx:id="quantityColumn" prefWidth="77.0" text="Quantity" />
+                                                <TableColumn fx:id="iconColumn" prefWidth="83.0" text="Icon" />
+                                            </columns>
+                                        </TableView>
+
+                                        <Label layoutX="41.0" layoutY="280.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Item Details" />
+
+                                        <GridPane hgap="10.0" layoutX="41.0" layoutY="310.0" prefHeight="150.0" prefWidth="645.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+
+                                            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                            <Label text="Weight (g):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                <TextField fx:id="weightField" prefWidth="120.0" />
+                                                <ComboBox fx:id="weightUnitComboBox" prefWidth="70.0" />
+                                            </HBox>
+
+                                            <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                            <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <TextField fx:id="priceField" prefWidth="120.0" />
+                                                <ComboBox fx:id="currencyComboBox" prefWidth="70.0" />
+                                            </HBox>
+
+                                            <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                            <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                            <Label text="Temperature:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                            <ComboBox fx:id="tempComboBox" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                                            <Label text="Aisle:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                            <ComboBox fx:id="aisleComboBox" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                                            <AnchorPane fx:id="imagePreviewPane" prefHeight="150.0" prefWidth="160.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                <effect>
+                                                    <BoxBlur />
+                                                </effect>
+                                            </AnchorPane>
+                                        </GridPane>
+
+                                        <HBox layoutX="41.0" layoutY="470.0" spacing="10.0">
+                                            <Button fx:id="addItemButton" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Add Item" />
+                                            <Button fx:id="updateItemButton" mnemonicParsing="false" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;" text="Update Item" />
+                                            <Button fx:id="deleteItemButton" mnemonicParsing="false" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;" text="Delete Item" />
+                                            <Button fx:id="clearFormButton" mnemonicParsing="false" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-weight: bold;" text="Clear Form" />
+                                        </HBox>
+
+                                        <HBox layoutX="460.0" layoutY="470.0" spacing="10.0" />
+                                        <VBox alignment="CENTER" layoutX="247.0" layoutY="110.0" spacing="25.0">
+                                            <padding>
+                                                <Insets bottom="30.0" top="30.0" />
+                                            </padding>
+                                        </VBox>
+                                        <ImageView fx:id="itemImageView" fitHeight="130.0" fitWidth="140.0" layoutX="448.0" layoutY="449.0" preserveRatio="true" />
+                                        <Button fx:id="removeImageButton" layoutX="581.0" layoutY="492.0" mnemonicParsing="false" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Remove Image" />
+                                        <Button fx:id="addImageButton" layoutX="487.0" layoutY="492.0" mnemonicParsing="false" style="-fx-background-color: #673AB7; -fx-text-fill: white;" text="Add Image" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab fx:id="floorsTab" text="Floor Areas">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="780.0">
+                                    <children>
+                                        <Label layoutX="41.0" layoutY="30.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add New Floor Area" />
+
+                                        <GridPane hgap="10.0" layoutX="41.0" layoutY="70.0" prefHeight="230.0" prefWidth="400.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+
+                                            <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <TextField fx:id="floorTitleField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                            <Label text="Level:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <TextField fx:id="floorLevelField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                            <Label text="Width (m):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                            <TextField fx:id="floorWidthField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                            <Label text="Length (m):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                            <TextField fx:id="floorLengthField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                            <Label text="Position X:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                                            <TextField fx:id="floorPosXField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                            <Label text="Position Y:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                                            <TextField fx:id="floorPosYField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                                            <Label text="Orientation (deg):" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                                            <TextField fx:id="floorOrientationField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                        </GridPane>
+
+                                        <Button fx:id="addFloorButton" layoutX="41.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;" text="Add Floor Area" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab fx:id="aislesTab" text="Aisles">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="780.0">
+                                    <children>
+                                        <Label layoutX="41.0" layoutY="30.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add New Aisle" />
+
+                                        <GridPane hgap="10.0" layoutX="41.0" layoutY="70.0" prefHeight="280.0" prefWidth="400.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+
+                                            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <TextField fx:id="aisleNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                            <Label text="Temperature:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <ComboBox fx:id="aisleTempComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <Label text="Floor Area:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                            <ComboBox fx:id="floorAreaComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                            <Label text="Width (m):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                            <TextField fx:id="aisleWidthField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                            <Label text="Length (m):" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                                            <TextField fx:id="aisleLengthField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                            <Label text="Position X:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                                            <TextField fx:id="aislePosXField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                                            <Label text="Position Y:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                                            <TextField fx:id="aislePosYField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                                            <Label text="Orientation (deg):" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                                            <TextField fx:id="aisleOrientationField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                        </GridPane>
+
+                                        <Button fx:id="addAisleButton" layoutX="41.0" layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;" text="Add Aisle" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab fx:id="shelvesTab" text="Shelves">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="780.0">
+                                    <children>
+                                        <Label layoutX="41.0" layoutY="30.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add New Shelf" />
+
+                                        <GridPane hgap="10.0" layoutX="41.0" layoutY="70.0" prefHeight="150.0" prefWidth="400.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+
+                                            <Label text="Aisle:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <ComboBox fx:id="shelfAisleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                            <Label text="Capacity (kg):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <TextField fx:id="shelfCapacityField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                            <Label text="Current Weight (kg):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                            <TextField fx:id="shelfWeightField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                            <Label text="Current Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                            <TextField fx:id="shelfQuantityField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        </GridPane>
+
+                                        <Button fx:id="addShelfButton" layoutX="41.0" layoutY="240.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;" text="Add Shelf" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="stockViewerTab" text="Stock Viewer">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="780.0">
+                                    <children>
+                                        <Label layoutX="41.0" layoutY="30.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Stock Viewer" />
+
+                                        <VBox layoutX="41.0" layoutY="70.0" prefWidth="400.0" spacing="15">
+                                            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Basic Statistics" />
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="overallStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Overall Summary">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="floorStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Floor Areas">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="aisleStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Aisles">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="shelfStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Shelves">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <Button fx:id="itemStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Items">
+                                                <font>
+                                                    <Font name="Nirmala UI" size="14.0" />
+                                                </font>
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND" />
+                                                </cursor>
+                                            </Button>
+
+                                            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20 0 0 0;" text="Distribution Analysis" />
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="tempStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="By Temperature">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="priceRangeBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="By Price Range">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <HBox spacing="10">
+                                                <Button fx:id="lowStockBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Low Stock Report">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="distributionBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="All Distributions">
+                                                    <font>
+                                                        <Font name="Nirmala UI" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                            </HBox>
+
+                                            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20 0 0 0;" text="Reports" />
+
+                                            <Button fx:id="fullReportBtn" mnemonicParsing="false" prefHeight="40" prefWidth="147.0" text="Full Stock Report">
+                                                <font>
+                                                    <Font name="Nirmala UI" size="14.0" />
+                                                </font>
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND" />
+                                                </cursor>
+                                            </Button>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </center>
+    <left>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="162.0" fitWidth="198.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/icon1.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b02f2f" height="416.0" layoutX="-6.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="210.0" />
+                <Button fx:id="stockButton" layoutX="27.0" layoutY="235.0" mnemonicParsing="false" prefWidth="147.0" text="STOCK VIEWER">
+                    <font>
+                        <Font name="Nirmala UI" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="mapViewButton" layoutX="27.0" layoutY="299.0" mnemonicParsing="false" prefWidth="147.0" text="MAP VIEW">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+                <!-- SAVE button -->
+                <Button fx:id="saveButton" layoutX="27.0" layoutY="368.0" mnemonicParsing="false" prefWidth="147.0" text="SAVE">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+                <Button fx:id="resetButton" layoutX="27.0" layoutY="437.0" mnemonicParsing="false" prefWidth="147.0" text="RESET">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+                <Button fx:id="exitButton" layoutX="27.0" layoutY="506.0" mnemonicParsing="false" prefWidth="147.0" text="EXIT">
+                    <font>
+                        <Font name="Nirmala UI" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </Pane>
+    </left>
+</BorderPane>
