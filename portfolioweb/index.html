@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROB_TERMINAL V1.0</title>
+  <link href="https://cdn.jsdelivr.net/npm/tuicss@2.1.2/dist/tuicss.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="shell">
+    <div class="strip strip-top">
+      <div><span class="tag">ROB_TERMINAL v1.0</span> // PORTFOLIO SHOWCASE</div>
+      <div>
+        <div id="time">
+        </div>
+        <script>
+          function updateTime() {
+            const date = new Date();
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+            const time = date.toLocaleTimeString();
+            const day = date.toLocaleDateString(undefined, options);
+            document.getElementById('time').innerHTML =
+              `| ${day} | ${time} | REGION IE`;
+          }
+          setInterval(updateTime, 1000);
+          updateTime();
+        </script>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="header-line">
+        <span class="header-symbol">&gt;&gt;</span>
+        <div class="header-title">Rob Venn</div>
+
+        <div class="header-right">
+          <nav class="header-nav">
+            <a href="#terminal">Terminal</a>
+            <a href="#repos">Repos</a>
+            <a href="#tools">tools</a>
+            <a href="#data">Specs</a>
+            <a href="#projects">Projects</a>
+          </nav>
+
+          <div class="header-links">
+            <a href="mailto:rvenn.colab@gmail.com" class="header-link" title="Email">
+              <span class="header-link-icon">[✉]</span> EMAIL
+            </a>
+            <a href="https://github.com/rarbin" class="header-link" title="GitHub" target="_blank" rel="noopener">
+              <span class="header-link-icon">[⌥]</span> GITHUB
+            </a>
+            <a href="https://linkedin.com/rob-skeletor-venn" class="header-link" title="LinkedIn" target="_blank"
+              rel="noopener">
+              <span class="header-link-icon">[in]</span> LINKEDIN
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-sub">// [SE600] BSc (Hons) in Computer Science</div>
+    </div>
+
+    <div class="ticker">
+      <div class="ticker-inner" id="tickerInner"></div>
+    </div>
+
+    <div class="stack">
+      <section class="tui-window" id="terminal">
+        <fieldset class="window">
+          <legend>guest@rob:~# bash </legend>
+          <div class="term-out" id="terminalBody"></div>
+          <div class="term-in">
+            <span class="prompt">guest@rob:~#</span>
+            <input type="text" id="terminalInput" autofocus>
+          </div>
+        </fieldset>
+      </section>
+
+
+      <section class="tui-window" id="projects">
+        <fieldset class="window">
+          <legend>FEATURED</legend>
+          <div class="grid-projects" id="projectList"></div>
+        </fieldset>
+      </section>
+
+      <div class="grid-2" id="repos">
+        <section class="tui-window">
+          <fieldset class="window">
+            <legend>REPO INFO | <span id="statRepoName">SELECT A REPO</span></legend>
+            <div id="ascii3d" class="ascii-3d"></div>
+          </fieldset>
+        </section>
+
+        <section class="tui-window">
+          <fieldset class="window">
+            <legend>GIT REPO</legend>
+            <div id="gitList"></div>
+          </fieldset>
+        </section>
+      </div>
+
+      <section class="tui-window" id="tools">
+        <fieldset class="window">
+          <legend>TOOL SCROLLER</legend>
+          <div class="tool-scroller-wrap">
+            <div class="tool-scroller" id="toolScroller"></div>
+            <div class="tool-info">
+              <div>SELECTED: <span id="toolSelected">—</span></div>
+              <div>CATEGORY: <span id="toolCategory">—</span></div>
+              <div>VERSION: <span id="toolVersion">—</span></div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <!--  there is a better way to do this but right now it's the only way to format the two windows beside eachother   (see: lazy) -->
+      <div class="grid-2" id="data">
+
+        <section class="tui-window">
+          <fieldset class="window">
+            <legend>PLACEHOLDER<span id="dataTitle">placeholder</span></legend>
+            <div id="dataList">
+              <div class="data-row"><span class="label">PLACEHOLDER</span><span class="value">placeholder</span>
+              </div>
+              <div class="data-row"><span class="label">PLACEHOLDER</span><span class="value">placeholder</span></div>
+              <div class="data-row"><span class="label">PLACEHOLDER</span><span class="value red">placeholder</span>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+        <section class="tui-window">
+          <fieldset class="window">
+            <legend>CREDITS</legend>
+            <div class="desc">
+              <p>TUICSS: https://github.com/vinibiavatti1/TuiCss <br>
+                GitHub FETCH API examples: https://gist.github.com/justsml/529d0b1ddc5249095ff4b890aad5e801 
+              </p>
+
+            </div>
+          </fieldset>
+        </section>
+      </div>
+
+    </div>
+
+    <div class="strip strip-bottom">
+      <span>» ROB_TERMINAL v1.0</span>
+      <span>» GUEST #:</span>
+      <span class="strip-blinkies">
+        <a href="#" class="blinkie"><img src="blinkies/seed.png" alt="blinkie" width="88" height="31"></a>
+        <a href="#" class="blinkie"><img src="blinkies/best-viewed-with.png" alt="blinkie" width="88" height="31"></a>
+        <a href="#" class="blinkie"><img src="blinkies/cookies.png" alt="blinkie" width="88" height="31"></a>
+        <a href="#" class="blinkie"><img src="blinkies/1080.png" alt="blinkie" width="88" height="31"></a>
+        <a href="#" class="blinkie"><img src="blinkies/share-this-page.gif" alt="blinkie" width="88" height="31"></a>
+
+      </span>
+      <span>» SYSTEM READY <span class="blink"></span></span>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
