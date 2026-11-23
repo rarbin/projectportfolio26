@@ -1,5 +1,8 @@
 use("eventlogdb")
 
+
+//TBD search queries by hour, type
+
 /*actors*/
 db.actors.find({ 'permission.type': 'admin' });
 db.actors.find({ tags: 'Cork' });
@@ -78,3 +81,16 @@ db.resources.aggregate([
             { type: 1, metadata: 1 }
     }
 ])
+
+/*EVENT STORE*/
+
+//all actions/events on server-1 sorted by time (ascending/1)
+db.eventstore.find({ aggregateId: "server-1" }).sort({ _id: 1 })
+
+//all actions/events taken by given actor 
+
+//-1 allows searching backwards in the index, which is potentially faster depending on find location. https://stackoverflow.com/a/74778161
+db.eventstore.find({"actor.id":"Admin-A"}).sort({ocurredAt:-1})
+
+//action/event history involved with Cloud-A
+db.eventstore.find({"resource.id":"Cloud-A"}).sort({occurredAt:-1})
