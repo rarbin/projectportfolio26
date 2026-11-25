@@ -11,10 +11,11 @@ https://oneuptime.com/blog/post/2026-03-31-mongodb-how-to-implement-event-sourci
 //https://oneuptime.com/blog/post/2026-03-31-mongodb-implement-event-replay/view
 //https://www.geeksforgeeks.org/mongodb/mongodb-db-collection-createindex-method/ 
 db.eventstore.createIndex({ aggregateId: 1 })
-db.eventstore.createIndex({aggregateType: 1, occuredAt: 1}) 
-db.eventstore.createIndex({eventType: 1,  occuredAt: -1})
-db.eventstore.createIndex({"actor.id": 1, occuredAt: -1})
-db.eventstore.createIndex({"resource.id": 1, occuredAt: -1})
+//using timestamp instead of medium 'occurredAt', function is the same
+db.eventstore.createIndex({ aggregateType: 1, timeStamp: 1 })
+db.eventstore.createIndex({ eventType: 1, timeStamp: -1 })
+db.eventstore.createIndex({ "actor.id": 1, timeStamp: -1 })
+db.eventstore.createIndex({ "resource.id": 1, timeStamp: -1 })
 
 /*
 one event store object has:
@@ -77,35 +78,36 @@ const lastId = db.eventstore.find({$expr:{ aggregateId: "server-1" }).sort({ _id
 //append a new file eventc, after checking for the last number in the sequence
 
 //get last id
-db.eventstore.find({ aggregateId: "server-1" }).sort({ _id: -1 }).projection({_id:1}).limit(1) 
+db.eventstore.find({ aggregateId: "server-1" }).sort({ _id: -1 }).projection({ _id: 1 }).limit(1)
 
 //insert new
 db.eventstore.insertOne({
-  _id: "server-1:3",
-  aggregateId: "server-1", aggregateType: "UbuntuCloud",
-  eventType: "FileAdded",
-  timeStamp: ISODate(),
-  upload: {fileId: "cool.png"},
-  resource: { id: "Cloud-A", type: "cloudStorage" },
-  actor:    { id: "Admin-B", type: "admin", ip: "192.168.1.4" }
-}) 
+    _id: "server-1:3",
+    aggregateId: "server-1", aggregateType: "UbuntuCloud",
+    eventType: "FileAdded",
+    timeStamp: ISODate(),
+    upload: { fileId: "cool.png" },
+    resource: { id: "Cloud-A", type: "cloudStorage" },
+    actor: { id: "Admin-B", type: "admin", ip: "192.168.1.4" }
+})
 
 
 //find last event for its sequence number
-db.eventstore.find({aggregateId:"server-1"}).sort({_id:-1}).limit(1) 
+db.eventstore.find({ aggregateId: "server-1" }).sort({ _id: -1 }).limit(1)
 
 
 //append file remove IF the file has been added
 db.eventstore.find({ aggregateId: "server-1", eventType: "FileAdded" })
 
 db.eventstore.insertOne({
-  _id: "server-1:4",
-  aggregateId: "server-1", aggregateType: "WinCloud",
-  eventType: "FileRemoved",
-  occurredAt: ISODate(),
-  payload: { fileId: "file-abc" },
-  resource: { id: "Cloud-A", type: "cloudStorage" },
-  actor:    { id: "Admin-B", type: "admin", ip: "192.168.1.4" }
+    _id: "server-1:4",
+    aggregateId: "server-1", aggregateType: "WinCloud",
+    eventType: "FileRemoved",
+    //update to match more with 'timestamp/upload' than the medium article terms (https://oneuptime.com/blog/post/2026-03-31-mongodb-implement-event-replay/view )
+    timeStamp: ISODate(),
+    upload: { fileId: "file-abc" },
+    resource: { id: "Cloud-A", type: "cloudStorage" },
+    actor: { id: "Admin-B", type: "admin", ip: "192.168.1.4" }
 })
 
 /*DELETE*/
